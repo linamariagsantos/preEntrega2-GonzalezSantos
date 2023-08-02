@@ -39,7 +39,7 @@ function calculos(porcentaje, valor) {
 
 }
 
-function ComparativaCuotas(compraCasa) {
+function ComparativaCuotas(compraCasa,porcentaje) {
     console.log("Comparativa de cuotas")
 
     for (let i = 0; i < 7; i++) {
@@ -54,7 +54,7 @@ function ComparativaCuotas(compraCasa) {
 
         compraCasa[i] = suma
 
-        console.log("Con el porcentaje de préstamo :" + porcentaje + "La cuota mes es de: " + compraCasa[i])
+        console.log("Con el: " + porcentaje + "%, La cuota mes es de: " + compraCasa[i])
 
         porcentaje = porcentaje + 10;
     }
@@ -66,34 +66,24 @@ let valor = parseInt(prompt("Ingresa el valor de la vivienda, sin puntos ni coma
 alert("El monto ingresado fue: " + valor)
 
 // 2. Valor del préstamo en %
-let porcentaje = parseInt(prompt("¿Cuanto dinero necesitas?: 10, 20, 30, 40, 50, 60 ó 70" + "%" + " (Ingresa solo el número)"))
 
-if (porcentaje != 10 && porcentaje != 20 && porcentaje != 30 && porcentaje != 40 && porcentaje != 50 && porcentaje != 60 && porcentaje != 70) {
+let continuar = false;
 
-    let continuar = false;
+while (continuar == false) {
 
-    alert("Valor incorrecto, por favor ingrese una de las opciones")
+    let porcentaje = parseInt(prompt("¿Cuanto dinero necesitas?: 10, 20, 30, 40, 50, 60 ó 70 % (Ingresa solo el número)"))
 
-    while (continuar == false) {
+    if (porcentaje == 10 || porcentaje == 20 || porcentaje == 30 || porcentaje == 40 || porcentaje == 50 || porcentaje == 60 || porcentaje == 70) {
 
-        let porcentaje = parseInt(prompt("¿Cuanto dinero necesitas?: 10, 20, 30, 40, 50, 60 ó 70" + "%" + " (Ingresa solo el número)"))
+        continuar = true
 
-        if (porcentaje == 10 || porcentaje == 20 || porcentaje == 30 || porcentaje == 40 || porcentaje == 50 || porcentaje == 60 || porcentaje == 70) {
+        let resultado = calculos(porcentaje, valor).toFixed(2)
 
-            continuar = true            
+        let compraCasa = [resultado]
 
-            let resultado = calculos(porcentaje, valor).toFixed(2)
+        ComparativaCuotas(compraCasa, porcentaje)
 
-            let compraCasa = [resultado]
-
-            ComparativaCuotas(compraCasa)
-
-        } else {
-            continuar = false;
-        }
+    } else {
+        continuar = false;
     }
-
-} else {
-    calculos(porcentaje, valor)
-    ComparativaCuotas(compraCasa)
 }
