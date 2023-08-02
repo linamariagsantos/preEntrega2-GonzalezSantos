@@ -81,6 +81,9 @@ while (continuar == false) {
 
         let compraCasa = [resultado]
 
+        /* A continuación se calcula el valor de la cuota correspondiente a cada porcentaje */
+
+        porcentaje = 10
         ComparativaCuotas(compraCasa, porcentaje)
 
     } else {
