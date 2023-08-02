@@ -90,3 +90,20 @@ while (continuar == false) {
         continuar = false;
     }
 }
+
+/*Ejemplo utilización de objetos */
+
+let nombre = prompt("Ingresa tu nombre")
+let edad = prompt("Ingresa tu edad")
+let prestamo = parseInt(prompt("Ingresa el porcentaje de préstamo solicitado"))
+
+const persona = {
+    datoNombre: nombre,
+    datoEdad: edad,    
+    datoPrestamo: prestamo
+}
+
+
+console.log("El/la señor@ : "+persona.datoNombre)
+console.log("de "+persona.datoEdad+" años")
+console.log("solicita un préstamo por el valor de: "+persona.datoPrestamo)
