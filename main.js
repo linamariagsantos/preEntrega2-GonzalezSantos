@@ -31,11 +31,11 @@ function calculos(porcentaje, valor) {
     let base = 1 + tasa
     let valorActual = demo(base, nummeses)
 
-    let suma = prestamo * ((valorActual * tasa) / (valorActual - 1))
+    let ecuacion = prestamo * ((valorActual * tasa) / (valorActual - 1))
 
-    alert("La cuota mensual es de: " + suma.toFixed(2))
+    alert("La cuota mensual es de: " + ecuacion.toFixed(2))
 
-    return suma
+    return ecuacion
 
 }
 
@@ -50,9 +50,9 @@ function ComparativaCuotas(compraCasa,porcentaje) {
         let base = 1 + tasa
         let valorActual = demo(base, nummeses)
 
-        let suma = prestamo * ((valorActual * tasa) / (valorActual - 1))
+        let ecuacion = prestamo * ((valorActual * tasa) / (valorActual - 1))
 
-        compraCasa[i] = suma
+        compraCasa[i] = ecuacion
 
         console.log("Con el: " + porcentaje + "%, La cuota mes es de: " + compraCasa[i])
 
