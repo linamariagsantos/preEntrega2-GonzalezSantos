@@ -104,6 +104,5 @@ const persona = {
 }
 
 
-console.log("El/la señor@ : "+persona.datoNombre)
-console.log("de "+persona.datoEdad+" años")
-console.log("solicita un préstamo por el valor de: "+persona.datoPrestamo)
+alert("El/la señor@ : " + persona.datoNombre + " de " + persona.datoEdad + " años " + "solicita un préstamo por el valor de: " + persona.datoPrestamo + " pesos")
+
