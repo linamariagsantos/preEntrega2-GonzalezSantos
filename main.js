@@ -95,14 +95,14 @@ while (continuar == false) {
 
 let nombre = prompt("Ingresa tu nombre")
 let edad = prompt("Ingresa tu edad")
-let prestamo = parseInt(prompt("Ingresa el porcentaje de préstamo solicitado"))
+
 
 const persona = {
     datoNombre: nombre,
     datoEdad: edad,    
-    datoPrestamo: prestamo
+    datoValor: valor
 }
 
 
-alert("El/la señor@ : " + persona.datoNombre + " de " + persona.datoEdad + " años " + "solicita un préstamo por el valor de: " + persona.datoPrestamo + " pesos")
+alert("El/la señor@ : " + persona.datoNombre + " de " + persona.datoEdad + " años " + "solicita un préstamo sobre el valor de: " + persona.datoPrestamo + " pesos")
 
