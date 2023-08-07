@@ -39,7 +39,7 @@ function calculos(porcentaje, valor) {
 
 }
 
-function ComparativaCuotas(compraCasa,porcentaje) {
+function ComparativaCuotas(compraCasa, porcentaje) {
     console.log("Comparativa de cuotas")
 
     for (let i = 0; i < 7; i++) {
@@ -54,10 +54,19 @@ function ComparativaCuotas(compraCasa,porcentaje) {
 
         compraCasa[i] = ecuacion
 
-        console.log("Con el: " + porcentaje + "%, La cuota mes es de: " + compraCasa[i])
+        /* console.log("Con el: " + porcentaje + "%, La cuota mes es de: " + compraCasa[i]) */
 
         porcentaje = porcentaje + 10;
     }
+    
+    console.log("El valor de las cuotas por cada porcentaje es:")
+
+    compraCasa.forEach(
+        function(element){
+            console.log(element)
+        }
+    )
+    
 }
 
 
@@ -86,6 +95,8 @@ while (continuar == false) {
         porcentaje = 10
         ComparativaCuotas(compraCasa, porcentaje)
 
+        
+
     } else {
         continuar = false;
     }
@@ -99,10 +110,9 @@ let edad = prompt("Ingresa tu edad")
 
 const persona = {
     datoNombre: nombre,
-    datoEdad: edad,    
+    datoEdad: edad,
     datoValor: valor
 }
 
 
-alert("El/la señor@ : " + persona.datoNombre + " de " + persona.datoEdad + " años " + "solicita un préstamo sobre el valor de: " + persona.datoPrestamo + " pesos")
-
+alert("El/la señor@ : " + persona.datoNombre + " de " + persona.datoEdad + " años " + "solicita un préstamo sobre el valor de: " + persona.datoValor + " pesos")
